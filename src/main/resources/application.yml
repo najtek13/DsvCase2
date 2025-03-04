@@ -1,0 +1,12 @@
+spring:
+  profiles:
+    active: @spring.profiles.active@
+
+kafka:
+  topicName: TEST.BOOKINGREQUEST.TOPIC
+  bootstrapAddress: localhost:9092
+
+mongodb:
+  connectionString: mongodb://localhost:27017/TestDb
+
+
