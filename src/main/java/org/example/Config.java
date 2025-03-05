@@ -55,16 +55,19 @@ public class Config {
 
     @Bean
     public KafkaTemplate<String, Object> kafkaTemplate() {
+
         return new KafkaTemplate<>(producerFactory());
     }
 
     @Bean
     public MongoDatabaseFactory mongoDatabaseFactory() {
+
         return new SimpleMongoClientDatabaseFactory(new ConnectionString(connectionString));
     }
 
     @Bean
     public MongoTemplate mongoTemplate(MongoDatabaseFactory mongoDatabaseFactory) {
+
         return new MongoTemplate(mongoDatabaseFactory);
     }
 }

@@ -41,8 +41,7 @@ public class TestStep extends Step {
         List bookings = mongoService.findByBookingNumber(expectedBooking.getBookingNumber());
 
         assertThat(bookings)
-                .hasSize(1);
-        assertThat(bookings.get(0))
-                .isEqualTo(expectedBooking);
+                .hasSize(1)
+                .contains(expectedBooking);
     }
 }

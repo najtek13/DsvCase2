@@ -19,7 +19,10 @@ public class MongoService {
 
     public List<Booking> findByBookingNumber(int bookingNumber){
 
-        Query query = new Query().addCriteria(Criteria.where("bookingNumber").is(bookingNumber));
+        Query query = new Query()
+                .addCriteria(Criteria
+                        .where("bookingNumber")
+                        .is(bookingNumber));
 
         return mongoTemplate.find(query, Booking.class);
     }
